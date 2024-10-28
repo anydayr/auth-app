@@ -1,12 +1,17 @@
-import { ButtonProps as ButtonPropsMUI, Button } from '@mui/material';
+import React from 'react';
+import { Button as MUIButton, ButtonProps as ButtonPropsMUI } from '@mui/material';
 
 interface ButtonProps extends ButtonPropsMUI {
-  label: string;
-  onClick: () => void;
+  onClick?: () => void;
+  children: React.ReactNode;
 }
 
-export const ButtonCustom = ({ label = '', onClick }: ButtonProps) => {
-  return <Button onClick={onClick}>{label}</Button>;
+export const Button: React.FC<ButtonProps> = ({ children, onClick, ...props }) => {
+  return (
+    <MUIButton onClick={onClick} {...props}>
+      {children}
+    </MUIButton>
+  );
 };
 
-export default ButtonCustom;
+export default Button;
