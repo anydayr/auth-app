@@ -1,9 +1,6 @@
-import { InputBaseProps, TextField } from '@mui/material';
+import { InputBaseProps, TextField, Typography } from '@mui/material';
 import { FieldErrors, UseFormRegister, UseFormTrigger } from 'react-hook-form';
-
-const formValidation = (errors: unknown) => {
-  return errors ? <p className="error-message"></p> : '';
-};
+import useFormValidation from '../hooks/useValidation';
 
 interface InputProps {
   register: UseFormRegister<any>;
@@ -16,7 +13,7 @@ interface InputProps {
   trigger?: UseFormTrigger<any>;
 }
 
-enum InputType {
+export enum InputType {
   NUMBER = 'number',
   PASSWORD = 'password',
   SEARCH = 'search',
@@ -28,29 +25,33 @@ enum InputType {
 export const Input = ({
   register,
   name,
-  errors,
+  errors = {},
   label = '',
   type,
   inputProps,
   disabled = false,
   trigger
 }: InputProps) => {
+  const { message = null, style } = useFormValidation(errors, name);
   return (
     <div>
       <TextField
-        required
         disabled={disabled}
         type={type}
         error={errors && !!errors[name]}
         id={name}
         label={label}
-        variant="standard"
+        variant="outlined"
         {...register(name)}
         {...(inputProps && { inputProps: inputProps })}
         onChange={() => trigger && trigger()}
         fullWidth
       />
-      {errors && formValidation(errors)}
+      {message && (
+        <Typography variant="caption" style={style}>
+          {message ?? ''}
+        </Typography>
+      )}
     </div>
   );
 };
