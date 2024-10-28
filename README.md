@@ -10,20 +10,123 @@
 - **Material-UI**: Biblioteca de componentes de React que implementa el diseño de Material Design.
 - **pnpm**: Gestor de paquetes rápido y eficiente.
 
+## Instalación
+Instrucciones para instalar y configurar el proyecto en tu máquina local:
+
+1. Clona el repositorio:
+   ```bash
+   https://github.com/anydayr/auth-app.git
+
+2. Navega al directorio de Auth-app
+3. Instala las dependencias usando :
+   ```bash
+   pnpm i
+4. Inicia el proyecto utilizando :
+   ```bash
+   pnpm run dev
+
+Por último, Accede a la aplicación en tu navegador en http://localhost:5173 !
+
 ## Estructura del Proyecto
 
 He seguido el concepto de Clean Architecture
-
-AUTH-APP/
-├── src/
-│ ├── components/ # Componentes reutilizables
-│ │ └──
-│ ├── contexts/ # Contextos de React
-│ ├── hooks/ # Hooks personalizados
-│ ├── pages/ # Páginas de la aplicación
-│ │ └──
-│ ├── styles/ # Archivos de estilo
-│ ├── App.tsx # Componente principal de la aplicación
-│ ├── main.tsx # Punto de entrada de la aplicación
-│ └── utils/ # Funciones utilitarias
-└── public/ # Archivos estáticos
+```bash📦src
+ ┣ 📂adapters
+ ┣ 📂assets
+ ┃ ┣ 📜app-logo.png
+ ┃ ┣ 📜home.svg
+ ┃ ┣ 📜login-layout.jpg
+ ┃ ┣ 📜not-found.svg
+ ┃ ┣ 📜profile.svg
+ ┃ ┗ 📜user.jpg
+ ┣ 📂components
+ ┃ ┣ 📜Alert.tsx
+ ┃ ┣ 📜Button.tsx
+ ┃ ┣ 📜Dialog.tsx
+ ┃ ┣ 📜DialogGroup.tsx
+ ┃ ┗ 📜TextField.tsx
+ ┣ 📂constants
+ ┃ ┗ 📜input-validations.ts
+ ┣ 📂guards
+ ┃ ┣ 📜auth.guard.tsx
+ ┃ ┗ 📜roles.tsx
+ ┣ 📂hooks
+ ┃ ┗ 📜useValidation.ts
+ ┣ 📂layout
+ ┣ 📂models
+ ┃ ┣ 📜roles.ts
+ ┃ ┣ 📜routes.ts
+ ┃ ┗ 📜user.model.ts
+ ┣ 📂pages
+ ┃ ┣ 📂auth
+ ┃ ┃ ┣ 📂constants
+ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┗ 📜useLoginForm.ts
+ ┃ ┃ ┣ 📂layout
+ ┃ ┃ ┣ 📂types
+ ┃ ┃ ┃ ┗ 📜login.ts
+ ┃ ┃ ┣ 📜AuthLayout.tsx
+ ┃ ┃ ┣ 📜login-scheme.ts
+ ┃ ┃ ┗ 📜Login.tsx
+ ┃ ┣ 📂private
+ ┃ ┃ ┣ 📂dashboard
+ ┃ ┃ ┃ ┣ 📂adapters
+ ┃ ┃ ┃ ┃ ┗ 📜list-placeholder.ts
+ ┃ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┃ ┣ 📜AccountMenu.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜AppNavbar.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜AvatarComponent.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜Columns.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜DataGrid.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜Header.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜MenuButton.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜MenuContent.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜NavbarBreadcrumbs.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜Search.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜SideMenu.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜SideMenuMobile.tsx
+ ┃ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┃ ┣ 📜useCreatePlaceholders.ts
+ ┃ ┃ ┃ ┃ ┣ 📜useEditPlaceholders.ts
+ ┃ ┃ ┃ ┃ ┗ 📜useGetPlaceholders.ts
+ ┃ ┃ ┃ ┣ 📂interfaces
+ ┃ ┃ ┃ ┃ ┗ 📜placeholder-data.ts
+ ┃ ┃ ┃ ┣ 📂services
+ ┃ ┃ ┃ ┃ ┣ 📜create-placeholder.ts
+ ┃ ┃ ┃ ┃ ┣ 📜delete-placeholder.ts
+ ┃ ┃ ┃ ┃ ┣ 📜edit-placeholder.ts
+ ┃ ┃ ┃ ┃ ┗ 📜get-placeholders.ts
+ ┃ ┃ ┃ ┣ 📂types
+ ┃ ┃ ┃ ┃ ┣ 📜create.ts
+ ┃ ┃ ┃ ┃ ┗ 📜edit.ts
+ ┃ ┃ ┃ ┣ 📂utilities
+ ┃ ┃ ┃ ┃ ┣ 📜create-scheme.ts
+ ┃ ┃ ┃ ┃ ┗ 📜edit-scheme.ts
+ ┃ ┃ ┃ ┣ 📜Create.tsx
+ ┃ ┃ ┃ ┣ 📜Dashboard.tsx
+ ┃ ┃ ┃ ┣ 📜Edit.tsx
+ ┃ ┃ ┃ ┣ 📜Home.tsx
+ ┃ ┃ ┃ ┣ 📜HomeLayout.tsx
+ ┃ ┃ ┃ ┣ 📜List.tsx
+ ┃ ┃ ┃ ┣ 📜ListLayout.tsx
+ ┃ ┃ ┃ ┗ 📜ProfilePreviewInfo.tsx
+ ┃ ┃ ┗ 📜Private.tsx
+ ┃ ┗ 📜NotFound.tsx
+ ┣ 📂redux
+ ┃ ┣ 📜modal-slice.ts
+ ┃ ┣ 📜snakcbar-slice.ts
+ ┃ ┣ 📜store.ts
+ ┃ ┣ 📜table-slice.ts
+ ┃ ┗ 📜user-slice.ts
+ ┣ 📂services
+ ┃ ┗ 📜axios-client.ts
+ ┣ 📂theme
+ ┃ ┗ 📜theme.ts
+ ┣ 📂utilities
+ ┃ ┣ 📜capitalize-first-letter.ts
+ ┃ ┣ 📜local-storage-utilities.ts
+ ┃ ┗ 📜routes-not-found.tsx
+ ┣ 📜App.tsx
+ ┣ 📜index.css
+ ┣ 📜main.tsx
+ ┗ 📜vite-env.d.ts
