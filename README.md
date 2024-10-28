@@ -41,7 +41,8 @@ Rol user
 -contraseña: user123
 
 ## RUTAS
-En este momento se tienen dos páginas : Home y list.
+En este momento se tienen: 
+
 Las rutas válidas son : 
 1. "/private/dashboard/home" : Bienvenida al usuario
 2. "/private/dashboard/list" : Página que contiene una tabla de datos para poder interactuar. 
