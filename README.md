@@ -27,7 +27,7 @@ Instrucciones para instalar y configurar el proyecto en tu máquina local:
 
 Por último, Accede a la aplicación en tu navegador en http://localhost:5173 !
 
-## Tecnologías Utilizadas
+## RUTAS
 En este momento se tienen dos páginas : Home y list.
 Las rutas válidas son : 
 1. "/private/dashboard/home" : Bienvenida al usuario
