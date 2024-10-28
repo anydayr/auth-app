@@ -31,7 +31,7 @@ Agrega esto a su contenido y luego guarda los cambios:
 
 Por último, Accede a la aplicación en tu navegador en http://localhost:5173 !
 
-## Credenciales de preuba 
+## Credenciales de prueba 
 Rol admin
 -usuario: admin
 -contraseña: admin123
