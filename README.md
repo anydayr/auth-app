@@ -24,8 +24,21 @@ Instrucciones para instalar y configurar el proyecto en tu máquina local:
 4. Inicia el proyecto utilizando :
    ```bash
    pnpm run dev
+5. Crea un archivo en la raiz del proyecto (src) y llámalo ".env". 
+Agrega esto a su contenido y luego guarda los cambios:
+   ```bash
+    VITE_APP_API_BASE_URL=https://jsonplaceholder.typicode.com/
 
 Por último, Accede a la aplicación en tu navegador en http://localhost:5173 !
+
+## Credenciales de preuba 
+Rol admin
+-usuario: admin
+-contraseña: admin123
+
+Rol user
+-usuario: user
+-contraseña: user123
 
 ## RUTAS
 En este momento se tienen dos páginas : Home y list.
