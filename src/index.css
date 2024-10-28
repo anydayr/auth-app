@@ -1,0 +1,8 @@
+:root {
+  --bg-app: #4b4453;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-app);
+}
