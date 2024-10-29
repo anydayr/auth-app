@@ -44,7 +44,7 @@ Rol user
 En este momento se tienen: 
 
 Las rutas válidas son : 
-1. "/private/dashboard/home" : Bienvenida al usuario
+1. "/private/dashboard" : Bienvenida al usuario
 2. "/private/dashboard/list" : Página que contiene una tabla de datos para poder interactuar. 
 3. "/": Inicio de sesión
 4. "/login: Mismo punto que el anterior
