@@ -39,7 +39,7 @@ function App() {
               </RoutesNotFound>
             </BrowserRouter>
             <ModalGroup />
-            <AlertMessage text="This is an alert message!" severity="error" />
+            <AlertMessage />
           </Provider>
         </ThemeProvider>
       </Suspense>
