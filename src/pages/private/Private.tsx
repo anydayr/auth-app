@@ -6,17 +6,16 @@ import ListPlaceholder from './dashboard/List';
 import HomeLayout from './dashboard/HomeLayout';
 import ListLayout from './dashboard/ListLayout';
 import ProfilePreviewInfo from './dashboard/ProfilePreviewInfo';
-
 const Dashboard = lazy(() => import('./dashboard/Dashboard'));
-const Home = lazy(() => import('./dashboard/Home')); // Asegúrate de que Home esté importado correctamente
+const Home = lazy(() => import('./dashboard/Home'));
 
 function Private() {
   return (
     <RoutesNotFound>
-      <Route path="/" element={<Navigate to={PrivateRoutes.DASHBOARD} />} />
+      <Route path="/" element={<Navigate to={`${PrivateRoutes.DASHBOARD}`} />} />
       <Route path={PrivateRoutes.DASHBOARD} element={<Dashboard />}>
         <Route
-          path={PrivateRoutes.HOME}
+          index
           element={
             <HomeLayout>
               <Home />

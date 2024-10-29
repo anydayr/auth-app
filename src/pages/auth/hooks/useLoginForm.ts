@@ -47,7 +47,7 @@ export default function useLoginForm() {
           color: user.colorIcon
         })
       );
-      navigate(`/${PrivateRoutes.PRIVATE}`, { replace: true });
+      navigate(`/private/${PrivateRoutes.DASHBOARD}`, { replace: true });
     }
   };
 

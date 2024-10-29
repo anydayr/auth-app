@@ -11,7 +11,7 @@ import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import { PrivateRoutes } from '../../../../models/routes';
 
 const mainListItems = [
-  { text: 'Inicio', icon: <HomeRoundedIcon />, path: PrivateRoutes.HOME },
+  { text: 'Inicio', icon: <HomeRoundedIcon />, path: '' },
   { text: 'Lista', icon: <AnalyticsRoundedIcon />, path: PrivateRoutes.LIST }
 ];
 
