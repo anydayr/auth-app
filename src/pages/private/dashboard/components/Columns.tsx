@@ -58,8 +58,8 @@ export function renderActions(params: GridCellParams<{ name: string; color: stri
   };
 
   const handleDelete = (id: number) => {
-    console.log('Eliminando elemento:', id);
-    // Aquí puedes agregar la lógica para eliminar el elemento
+    dispatch(updateTable({ rowSelected: id }));
+    dispatch(updateModalType({ content: 'delete-placeholders' }));
     handleClose();
   };
 
