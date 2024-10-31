@@ -44,7 +44,6 @@ export const Input = ({
         variant="outlined"
         {...register(name)}
         {...(inputProps && { inputProps: inputProps })}
-        onChange={() => trigger && trigger()}
         fullWidth
       />
       {message && (
