@@ -23,7 +23,10 @@ export const userSlice = createSlice({
     updateUser: (state, action) => {
       return { ...state, ...action.payload };
     },
-    resetUser: () => EmptyUserState
+    resetUser: () => {
+      localStorage.clear();
+      return EmptyUserState;
+    }
   }
 });
 
