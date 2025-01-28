@@ -1,4 +1,4 @@
-# Mi Prueba Técnica
+# PLACEHOLDER APP
 
 ¡Esta es mi prueba técnica! Este proyecto está construido con React, Vite, TypeScript y Material-UI.
 
